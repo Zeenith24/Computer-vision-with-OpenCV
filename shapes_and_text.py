@@ -13,16 +13,16 @@ img = rescale(img)
 cv.imshow("bike",img)
 
 #rectangle
-# cv. rectangle(img, (0,0), (225,225), (0,0,225),thickness= 3)
-# cv.imshow("rect",img)
+cv. rectangle(img, (0,0), (225,225), (0,0,225),thickness= 3)
+cv.imshow("rect",img)
 
-# #circle
-# cv.circle(img, (225,225),40, (0,0,225),thickness= 3 )
-# cv.imshow("circle", img)
+#circle
+cv.circle(img, (225,225),40, (0,0,225),thickness= 3 )
+cv.imshow("circle", img)
 
-# #line 
-# cv.line(img,(0,0), (225,225), (0,0,225),thickness= 3 )
-# cv.imshow("line",img)
+#line 
+cv.line(img,(0,0), (225,225), (0,0,225),thickness= 3 )
+cv.imshow("line",img)
 
 #write text
 cv.putText(img, input_text,(225,255), cv.FONT_HERSHEY_COMPLEX_SMALL, 1.0, (255,0,0), 3)
