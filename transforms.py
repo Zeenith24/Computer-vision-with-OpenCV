@@ -19,6 +19,34 @@ def translate(img , x, y):
 # -x --> left , -y --> up
 # +x --> right , +y --> down
 translated = translate(img, 100, 100)
-cv.imshow("trans", translated)
+# cv.imshow("trans", translated)
+
+#rotate 
+def rotate ( img , angle, rotpoint = None):
+    (height, width) = img.shape[:2]
+
+    if rotpoint is None :
+        rotpoint = (width//2, height//2)
+
+    rotMat = cv.getRotationMatrix2D(rotpoint, angle, 1.0)
+    dims = (width, height)
+
+    return cv.warpAffine(img , rotMat, dims)
+
+roated = rotate(img, 90)
+# cv.imshow("roated", roated)
+
+#resizing 
+resize  = cv.resize(img , (500, 500), interpolation=cv.INTER_LINEAR)
+# cv.imshow("resized", resize)
+
+#fliping 
+# 0 --> vertically, 1--> horizontally , -1 --> both 
+flip = cv.flip(img, -1)
+# cv.imshow("flip", flip)
+
+#cropping 
+crop = img[200:400, 300:400]
+cv.imshow("crop", crop)
 
 cv.waitKey(0)
